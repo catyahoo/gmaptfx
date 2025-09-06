@@ -3,7 +3,7 @@
 <head>
     <title>My Traffic</title>
     <style>
-        #map { height: 720px; width: 1280px; }
+        #map { height: 1080px; width: 1920px; }
     </style>
 </head>
 <body>
@@ -12,9 +12,11 @@
         function initMap() {
             const mycenter = { lat: 5.332465158269312, lng: 100.29087838831266 };
             const map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 14,
+                zoom: 15,
                 center: mycenter,
             });
+            const trafficLayer = new google.maps.TrafficLayer();
+            trafficLayer.setMap(map);
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3IAmg5okGyQc-1qtpZAHAugLQWsE096I&callback=initMap"></script>
